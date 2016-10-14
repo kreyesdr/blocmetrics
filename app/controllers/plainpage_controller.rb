@@ -1,0 +1,2 @@
+class PlainpageController < ApplicationController
+end
