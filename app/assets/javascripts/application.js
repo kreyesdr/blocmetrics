@@ -13,6 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require ./pages/altair_admin_common.min
+//= require ./pages/common.min
+//= require ./pages/login.min
+
+
+
+
+
+
+
+
+
 
 

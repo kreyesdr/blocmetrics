@@ -1,47 +1,37 @@
-<div class="page-signup">
-  <div class="wrapper">
-    <div class="main-body">
-      <div class="body-inner">
-        <div class="card bg-white">
-          <div class="card-content">
-            <section class="logo text-center">
-              <h1>BlocMetrics</h1>
-            </section>
-            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                <%= devise_error_messages! %>
-                <form class="form-horizontal">
-                  <fieldset>
-                    <div class="form-group">
-                      <div class="ui-input-group">
-                        <%= f.email_field :email, class: 'form-control', autofocus: true, placeholder: 'Email address' %>
-                        <span class="input-bar"></span>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="ui-input-group">
-                        <%= f.password_field :password, class: 'form-control', placeholder: 'Password', autocomplete: "off" %>
-                        <span class="input-bar"></span>
-                        <% if @minimum_password_length %>
-                            <em>(<%= @minimum_password_length %> characters minimum)</em>
-                        <% end %>
-                      </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="form-group">
-                      <p class="text-small">By clicking on sign up, you agree to <a href="javascript:;"><i>terms</i></a>
-                        and <a href="javascript:;"><i>privacy policy</i></a></p>
-                    </div>
-                  </fieldset>
-                  <div class="card-action no-border text-right">
-                    <%= f.submit 'Log In', class: 'btn btn-primary btn-block btn-block' %>
-                    <%= render "devise/shared/links" %>
-                  </div>
-                </form>
-                </div>
-            <% end %>
+<div class="login_page">
+
+  <div class="login_page_wrapper">
+    <div class="md-card" id="login_card">
+      <div class="md-card-content large-padding">
+        <div class="login_heading">
+          <div class="user_avatar"></div>
+        </div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <div class="uk-form-row">
+              <label for="login_username">Email</label>
+              <%= f.email_field :email, class: 'md-input', autofocus: true %>
             </div>
+            <div class="uk-form-row">
+              <label for="login_password">Password</label>
+              <%= f.password_field :password, class: 'md-input', autocomplete: "off" %>
+            </div>
+            <div class="uk-margin-medium-top">
+              <%= f.submit 'Log In', class: 'md-btn md-btn-primary md-btn-block md-btn-large' %>
+            </div>
+            <div class="uk-margin-top">
+              <%= link_to 'Forgot password?', new_user_password_path, class: 'uk-float-right' %>
+              <span class="icheck-inline">
+                            <input type="checkbox" name="login_page_stay_signed" id="login_page_stay_signed" data-md-icheck/>
+                            <label for="login_page_stay_signed" class="inline-label">Stay signed in</label>
+                        </span>
+            </div>
+        <% end %>
       </div>
     </div>
   </div>
+  <div class="uk-margin-top uk-text-center">
+    <%= link_to 'Create an account', new_user_registration_path %>
+  </div>
 </div>
-
+</div>
