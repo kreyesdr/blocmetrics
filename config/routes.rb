@@ -5,9 +5,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  devise_scope :user do
-    root to: 'devise/registrations#new'
-  end
+  # devise_scope :user do
+  #   root to: 'devise/registrations#new'
+  # end
+
+  root 'main#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
