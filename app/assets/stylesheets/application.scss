@@ -14,4 +14,8 @@
  *= require_self
  *= require uikit.almost-flat.min
  *= require login_page.min
+ *= require material_icons
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";

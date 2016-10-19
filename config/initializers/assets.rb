@@ -9,3 +9,12 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+Rails.application.config.assets.precompile += %w( modernizr.js )
+Rails.application.config.assets.precompile += %w( moment.js )
+Rails.application.config.assets.precompile += %w( jquery.scrollbar.js )
+Rails.application.config.assets.precompile += %w( jquery.bez.min.js )
+Rails.application.config.assets.precompile += %w( velocity.js )
+Rails.application.config.assets.precompile += %w( velocity.ui.js )
+Rails.application.config.assets.precompile += %w( uikit_custom.min.js )
+Rails.application.config.assets.precompile += %w( altair_admin_common.js )

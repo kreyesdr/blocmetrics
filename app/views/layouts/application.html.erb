@@ -4,11 +4,19 @@
   <title>Blocmetrics</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', 'http://fonts.googleapis.com/css?family=Roboto:300,400,500' %>
-
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<%= javascript_include_tag 'modernizr.js' %>
+<%= javascript_include_tag 'moment.js' %>
+<%= javascript_include_tag 'jquery.scrollbar.js' %>
+<%= javascript_include_tag 'jquery.bez.min.js' %>
+<%= javascript_include_tag 'velocity.js' %>
+<%= javascript_include_tag 'velocity.ui.js' %>
+<%= javascript_include_tag 'uikit_custom.min.js' %>
+<%= javascript_include_tag 'altair_admin_common.js' %>
 
 <%= yield %>
 
