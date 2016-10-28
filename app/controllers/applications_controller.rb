@@ -20,15 +20,15 @@ class ApplicationsController < ApplicationController
 
     if @application.save
       flash[:notice] = 'Application saved successfully'
-      redirect_to @application
+      redirect_to applications_path
     else
       flash.now[:alert] = 'There was an error saving this application, contact support'
+      redirect_to applications_path
     end
   end
 
   def edit
     @application = Application.find(params[:id])
-    @application = Application.new
   end
 
   def update
@@ -39,9 +39,10 @@ class ApplicationsController < ApplicationController
 
     if @application.save
       flash[:notice] = 'Application saved successfully'
-      redirect_to @application
+      redirect_to applications_path
     else
       flash.now[:alert] = 'There was an error saving this application, contact support'
+      redirect_to applications_path
     end
   end
 
@@ -49,11 +50,11 @@ class ApplicationsController < ApplicationController
     @application = Application.find(params[:id])
     if @application.destroy
       flash[:notice] = "\"#{@application.name}\" was deleted!"
+      redirect_to applications_path
     else
       flash.now[:alert] = 'There was an error deleting this application'
-      redirect_to application_paths
+      redirect_to applications_path
     end
   end
-
 end
 

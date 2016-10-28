@@ -27,8 +27,8 @@
               <tbody>
               <tr>
                 <% @application.each do |app| %>
-                    <td class="uk-text-center"><img class="md-user-image" src="avatars/avatar_01_tn.png" alt=""/></td>
-                    <td><%= app.user_id %></td>
+                    <td class="uk-text-center"><%= image_tag 'avatars/avatar_01_tn.png', class: 'md-user-image' %></td>
+                    <td><%= app.user.email %></td>
                     <td class="uk-text-center"><%= app.name %></td>
                     <td class="uk-text-center"><%= app.created_at.strftime("%d %b. %Y") %></td>
                     <td class="uk-text-center"><span class="uk-badge uk-badge-primary">Accepted</span>
@@ -38,7 +38,7 @@
                           <i class="md-icon material-icons">&#xE254;</i>
                       <% end %>
                       <%= link_to app, method: :delete do %>
-                          <a href="#"><i class="md-icon material-icons">&#xE88F;</i></a>
+                          <i class="md-icon material-icons">&#xE14C;</i>
                       <% end %>
                     </td>
                     </tr>
