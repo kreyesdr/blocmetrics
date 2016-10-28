@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # end
 
   root 'main#index'
+  resources :applications
 
 
   # Example of regular route:
