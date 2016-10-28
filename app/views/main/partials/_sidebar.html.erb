@@ -1,0 +1,25 @@
+<!-- main sidebar -->
+<aside id="sidebar_main">
+
+  <div class="sidebar_main_header">
+    <div class="sidebar_logo">
+    </div>
+  </div>
+
+  <div class="menu_section">
+    <ul>
+      <li title="Dashboard">
+        <%= link_to root_path do %>
+            <span class="menu_icon"><i class="material-icons">&#xE871;</i></span>
+            <span class="menu_title">Dashboard</span>
+        <% end %>
+      </li>
+      <li title="Applications">
+        <%= link_to applications_path do %>
+            <span class="menu_icon"><i class="material-icons">&#xE051;</i></span>
+            <span class="menu_title">Applications</span>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</aside><!-- main sidebar end -->
