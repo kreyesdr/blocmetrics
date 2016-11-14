@@ -34,6 +34,9 @@
                     <td class="uk-text-center"><span class="uk-badge uk-badge-primary">Accepted</span>
                     </td>
                     <td class="uk-text-center">
+                      <%= link_to application_path(app) do %>
+                          <i class="md-icon material-icons">&#xE417;</i>
+                      <% end %>
                       <%= link_to edit_application_path(app) do %>
                           <i class="md-icon material-icons">&#xE254;</i>
                       <% end %>
