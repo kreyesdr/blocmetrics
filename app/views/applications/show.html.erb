@@ -17,6 +17,7 @@
           <%= @application.event.each do |ev| %>
             <%= ev.name %>,
           <% end %>
+          <%= pie_chart @application.event.group(:name).count %>
         </div>
       </div>
     </div>
