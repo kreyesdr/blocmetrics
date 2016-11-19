@@ -15,9 +15,12 @@
           <h1><%= @application.name %></h1>
           <p><%= @application.description %></p>
           <%= @application.event.each do |ev| %>
-            <%= ev.name %>,
+              <%= ev.name %>
           <% end %>
           <%= pie_chart @application.event.group(:name).count %>
+          <% if Rails.env.production? %>
+              <%= line_chart @application.event.group_by_day(:created_at).count %>
+          <% end %>
         </div>
       </div>
     </div>

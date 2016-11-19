@@ -14,6 +14,7 @@ class API::EventsController < ApplicationController
     registered_application = Application.find_by(url: request.env['HTTP_ORIGIN'])
 
     if registered_application.nil?
+      puts "UNPROCESSABLE BECAUSE BAD ORIGIN"
       render json: "Unregistered application", status: :unprocessable_entity
     else
       @event = registered_application.event.new(event_params)
